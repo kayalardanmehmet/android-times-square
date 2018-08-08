@@ -195,7 +195,7 @@ public class MonthView extends LinearLayout {
         TextView holidayDate = new TextView(new ContextThemeWrapper(getContext(), holidayDateTextStyle));
         TextView holidayName = new TextView(new ContextThemeWrapper(getContext(), holidayNameTextStyle));
 
-        holidayDate.setText(holiday.getDate().get(Calendar.DAY_OF_MONTH) + " " + holiday.getDate().getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()));
+        holidayDate.setText(holiday.getDate().get(Calendar.DAY_OF_MONTH) + " " + holiday.getDate().getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault()));
         holidayName.setText(holiday.getName());
 
         holidayItem.addView(holidayDate);
