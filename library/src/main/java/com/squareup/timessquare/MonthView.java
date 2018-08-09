@@ -166,7 +166,7 @@ public class MonthView extends LinearLayout {
           cellView.setHighlighted(cell.isHighlighted());
           cellView.setTag(cell);
 
-          if(cell.isHoliday()){
+          if(cell.isHoliday() && cell.isCurrentMonth()){
             Calendar cal = Calendar.getInstance();
             cal.setTime(cell.getDate());
             holidays.add(new Holiday(cal, cell.getHolidayName()));
